@@ -21,5 +21,10 @@ namespace GITTest
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //comment here
+        }
     }
 }
