@@ -111,10 +111,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DestinationDatabase.mdf">
+    <Content Include="Databases\Data set 1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DestinationDatabase_log.ldf">
+    <Content Include="Databases\DestinationDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Databases\DestinationDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DestinationDatabase.mdf</DependentUpon>
     </Content>
