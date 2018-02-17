@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,16 +23,29 @@ namespace GITTest
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void GetDates_Click(object sender, EventArgs e)
         {
-            //comment here
-        }
+            List<string> Dates = new List<string>();
+            //clear the listbox
+            listBoxDates.Items.Clear();
 
-        private void sheet1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.sheet1BindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.data_set_1DataSet);
+            //Create the database string
+            string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'Databases\Data set 1.accdb'";
+
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                OleDbDataReader reader = null;
+                OleDbCommand getDates = new OleDbCommand("SELECT [Order Date], [Ship Date] from Sheet1'", connection);
+
+                reader = getDates.ExecuteReader();
+                while (reader.Read())
+                {
+                    Dates.Add(reader[0].ToString());
+                    Dates.Add(reader[1].ToString());
+                }
+            }
+            listBoxDates.DataSource = Dates;
 
         }
     }
