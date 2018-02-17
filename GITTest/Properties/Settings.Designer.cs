@@ -33,5 +33,16 @@ namespace GITTest.Properties {
                 return ((string)(this["DestinationDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Databases\\Data set" +
+            " 1.accdb\";Persist Security Info=True")]
+        public string Data_set_1ConnectionString {
+            get {
+                return ((string)(this["Data_set_1ConnectionString"]));
+            }
+        }
     }
 }

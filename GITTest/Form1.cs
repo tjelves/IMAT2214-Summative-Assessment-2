@@ -26,5 +26,13 @@ namespace GITTest
         {
             //comment here
         }
+
+        private void sheet1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sheet1BindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.data_set_1DataSet);
+
+        }
     }
 }
