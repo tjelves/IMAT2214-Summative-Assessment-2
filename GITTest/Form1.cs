@@ -25,6 +25,7 @@ namespace GITTest
 
         private void GetDates_Click(object sender, EventArgs e)
         {
+            //Create new list to store the results in.
             List<string> Dates = new List<string>();
             //clear the listbox
             listBoxDates.Items.Clear();
@@ -45,7 +46,20 @@ namespace GITTest
                     Dates.Add(reader[1].ToString());
                 }
             }
-            listBoxDates.DataSource = Dates;
+
+            //Create a new list for the formatted data.
+            List<string> DatesFormatted = new List<string>();
+
+            foreach (string date in Dates)
+            {
+                //Split the string on whitespace and remove anything thats blank.
+                var dates = date.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                //Grab the first item (we know this is the date) and add it to our new list.
+                DatesFormatted.Add(dates[0]);
+            }
+
+            //Bind the listbox to the list.
+            listBoxDates.DataSource = DatesFormatted;
 
         }
     }
