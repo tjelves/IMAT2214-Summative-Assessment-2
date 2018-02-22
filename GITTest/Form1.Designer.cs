@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.GetDates = new System.Windows.Forms.Button();
             this.listBoxDates = new System.Windows.Forms.ListBox();
+            this.listBoxTimes = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -63,11 +64,22 @@
             this.listBoxDates.Size = new System.Drawing.Size(120, 95);
             this.listBoxDates.TabIndex = 3;
             // 
+            // listBoxTimes
+            // 
+            this.listBoxTimes.FormattingEnabled = true;
+            this.listBoxTimes.HorizontalScrollbar = true;
+            this.listBoxTimes.Location = new System.Drawing.Point(138, 100);
+            this.listBoxTimes.Name = "listBoxTimes";
+            this.listBoxTimes.ScrollAlwaysVisible = true;
+            this.listBoxTimes.Size = new System.Drawing.Size(120, 95);
+            this.listBoxTimes.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.listBoxTimes);
             this.Controls.Add(this.listBoxDates);
             this.Controls.Add(this.GetDates);
             this.Controls.Add(this.label1);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GetDates;
         private System.Windows.Forms.ListBox listBoxDates;
+        private System.Windows.Forms.ListBox listBoxTimes;
     }
 }
 
