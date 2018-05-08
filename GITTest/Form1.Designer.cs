@@ -63,6 +63,7 @@
             this.listBoxDates.ScrollAlwaysVisible = true;
             this.listBoxDates.Size = new System.Drawing.Size(120, 95);
             this.listBoxDates.TabIndex = 3;
+            this.listBoxDates.SelectedIndexChanged += new System.EventHandler(this.listBoxDates_SelectedIndexChanged);
             // 
             // listBoxTimes
             // 

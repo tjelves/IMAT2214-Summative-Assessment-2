@@ -21,7 +21,7 @@ namespace GITTest
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            //TJ_test comment add
         }
 
         private void GetDates_Click(object sender, EventArgs e)
@@ -100,6 +100,11 @@ namespace GITTest
 
             //Bind the listbox to the list.
             listBoxTimes.DataSource = Times;
+        }
+
+        private void listBoxDates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
